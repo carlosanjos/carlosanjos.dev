@@ -1,4 +1,5 @@
 # carlosanjos.dev
+<<<<<<< HEAD
 
 ## Project setup
 ```
@@ -27,3 +28,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+Personal website
+>>>>>>> eae30f2d4fc4c012089bb1feaa8afda582a75498
