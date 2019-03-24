@@ -1,7 +1,10 @@
 language: node_js
 node_js:
   - "stable"
+cache:
+  - npm
 script:
+ - npm i
  - npm run build
  - echo "Beam me up, Scotty"
 install:
