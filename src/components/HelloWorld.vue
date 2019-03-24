@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Welcome to carlosanjos.dev</h1>
-    <p><a href="https://twitter.com/carlosanjosdev">@carlosanjos.dev</a></p>    
+    <a href="https://twitter.com/carlosanjosdev">@carlosanjos.dev</a>
   </div>
 </template>
 
