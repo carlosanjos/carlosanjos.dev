@@ -3,6 +3,8 @@ import App from './App.vue';
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
 import VueAnalytics from 'vue-analytics';
+import router from './router';
+import '@mdi/font/css/materialdesignicons.css';
 
 Vue.config.productionTip = false;
 
@@ -22,9 +24,11 @@ Vue.use(Vuetify, {
 
 Vue.use(VueAnalytics, {
   id: process.env.VUE_APP_GA,
+  router,
 });
 
 
 new Vue({
+  router,
   render: (h) => h(App),
 }).$mount('#app');

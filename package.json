@@ -12,12 +12,15 @@
     "vue-analytics": "^5.16.4",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0",
+    "vue-router": "^3.0.1",
     "vuetify": "^1.5.7"
   },
   "devDependencies": {
+    "@mdi/font": "^3.5.95",
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-typescript": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
+    "htmlhint": "^0.11.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "typescript": "^3.2.1",
