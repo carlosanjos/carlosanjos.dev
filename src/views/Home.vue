@@ -18,7 +18,7 @@
         </h1>
       </header>
 
-      <section>
+      <section class="header">
         <h2>I love coding and all the stuff around it. My favourite languages are PHP and TypeScript.</h2>
         <h3>TypeScript is the greatest thing since sliced bread, by the way</h3>
       </section>
@@ -74,6 +74,13 @@
   }
 }
 
+.header {
+  margin: 20px 15px;
+  h3 {
+   margin: 10px 0 0; 
+  }
+}
+
 .about-me {
   margin: 20px 15px;
   h2 {
@@ -86,12 +93,6 @@
     word-wrap: break-word;
     
   }
-}
-
-h3 {
-  font-size: 1.2em;
-  font-weight: normal;
-  line-height: 0.7em;
 }
 
 // $colours: (red: #fa1e44, yellow: #fec925, seawater: #c9e3db, green : #5ab190, blue: #00b4eb);
