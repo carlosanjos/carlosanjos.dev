@@ -31,9 +31,9 @@
                 <v-layout align-center justify-center fill-height tag="v-card-text">
                     <div class="name-card">
                         <h1 class="my-name">
-                            <span>/'</span>
-                            <span>k</span>
-                            <span>a:</span>
+                            <span>/</span>
+                            <span>ˈk</span>
+                            <span>aː</span>
                             <span>r</span>
                             <span>l</span>
                             <span>ʊ</span>
