@@ -101,9 +101,9 @@ import { Component, Vue, Prop, Provide } from 'vue-property-decorator';
 import Phonetic from '@/components/Phonetic.vue';
 
 @Component({
-	components: {
-		Phonetic,
-	},
+  components: {
+    Phonetic,
+  },
 })
 export default class Home extends Vue {
 
