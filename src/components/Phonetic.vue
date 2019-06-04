@@ -1,6 +1,5 @@
 <template>
   <v-layout align-center>
-
     <v-flex>
       <v-window v-model="window" vertical>
         <v-window-item>

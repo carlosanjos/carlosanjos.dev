@@ -1,5 +1,6 @@
 <template>
     <v-container>
+      <v-text-field v-model="test" label="Regular"></v-text-field>
         <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
             <v-btn-toggle v-model="toggle" multiple>
                 <v-btn flat :class="{ 'is-active': isActive.bold() }" @click="commands.bold">
@@ -74,7 +75,7 @@
 
 <script>
 
-import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap';
 import {
   Blockquote,
   CodeBlock,
@@ -93,7 +94,9 @@ import {
   Strike,
   Underline,
   History,
-} from 'tiptap-extensions'
+} from 'tiptap-extensions';
+import { db } from '../firebaseApp';
+import firebaseApp from '../firebaseApp';
 
 export default {
   components: {
@@ -103,7 +106,9 @@ export default {
   },
   data() {
     return {
-      html: "",
+      html: '',
+      content: '',
+      test: '',
       toggle: [1, 5],
       editor: new Editor({
         extensions: [
@@ -124,39 +129,26 @@ export default {
           new Underline(),
           new History(),
         ],
-        content: `
-          <h2>
-            Hi there,
-          </h2>
-          <p>
-            this is a very <em>basic</em> example of tiptap.
-          </p>
-          <pre><code>body { display: none; }</code></pre>
-          <ul>
-            <li>
-              A regular list
-            </li>
-            <li>
-              With regular items
-            </li>
-          </ul>
-          <blockquote>
-            It's amazing 👏
-            <br />
-            – mom
-          </blockquote>
-        `,
-        onUpdate: ({ getHTML }) => {
-            this.html = getHTML()
-      },
       }),
-    }
+      onUpdate: ({ getHTML }) => {
+        this.html = getHTML();
+      },
+      onInit: ({ setContent }) => {
+        setContent('<p>Foo</p>');
+      },
+    };
   },
-  
   beforeDestroy() {
     this.editor.destroy();
   },
-}
+  methods: {
+    add: (content) => {
+      db.collection('demo').add({
+        html: content,
+      });
+    },
+  },
+};
 </script>
 <style lang="scss">
 * {

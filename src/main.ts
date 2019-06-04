@@ -5,8 +5,11 @@ import 'vuetify/dist/vuetify.min.css';
 import VueAnalytics from 'vue-analytics';
 import router from './router';
 import '@mdi/font/css/materialdesignicons.css';
+import { firestorePlugin } from 'vuefire';
+import firebaseApp from './firebaseApp';
 
 Vue.config.productionTip = false;
+Vue.use(firestorePlugin);
 
 Vue.use(Vuetify, {
   theme: {
@@ -21,12 +24,10 @@ Vue.use(Vuetify, {
   iconfont: 'mdi',
 });
 
-
 Vue.use(VueAnalytics, {
   id: process.env.VUE_APP_GA,
   router,
 });
-
 
 new Vue({
   router,
